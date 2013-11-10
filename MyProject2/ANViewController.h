@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ANViewController : UIViewController
+@interface ANViewController : UIViewController{
+    
+    IBOutlet UILabel *myLabel;
+    
+}
 
+-(IBAction)pressButton;
+
+@property(nonatomic,retain) IBOutlet UILabel *myLabel;
 @end

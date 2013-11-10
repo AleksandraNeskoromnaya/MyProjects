@@ -14,6 +14,18 @@
 
 @implementation ANViewController
 
+@synthesize myLabel;
+
+int i;
+
+-(IBAction)pressButton{
+    
+    i=i+1;
+    
+    myLabel.text=[NSString stringWithFormat:@"%d", i];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
