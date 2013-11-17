@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844345411839442C00F76408 /* ANTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8443453F1839442C00F76408 /* ANTableViewController.m */; };
+		844345421839442C00F76408 /* ANTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844345401839442C00F76408 /* ANTableViewController.xib */; };
 		844B4F0A182ADFF600627A69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844B4F09182ADFF600627A69 /* Foundation.framework */; };
 		844B4F0C182ADFF600627A69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844B4F0B182ADFF600627A69 /* CoreGraphics.framework */; };
 		844B4F0E182ADFF600627A69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844B4F0D182ADFF600627A69 /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8443453E1839442C00F76408 /* ANTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTableViewController.h; sourceTree = "<group>"; };
+		8443453F1839442C00F76408 /* ANTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTableViewController.m; sourceTree = "<group>"; };
+		844345401839442C00F76408 /* ANTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANTableViewController.xib; sourceTree = "<group>"; };
 		844B4F06182ADFF600627A69 /* MyProject2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProject2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844B4F09182ADFF600627A69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		844B4F0B182ADFF600627A69 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +87,9 @@
 		844B4EFD182ADFF600627A69 = {
 			isa = PBXGroup;
 			children = (
+				8443453E1839442C00F76408 /* ANTableViewController.h */,
+				8443453F1839442C00F76408 /* ANTableViewController.m */,
+				844345401839442C00F76408 /* ANTableViewController.xib */,
 				844B4F0F182ADFF600627A69 /* MyProject2 */,
 				844B4F2E182ADFF600627A69 /* MyProject2Tests */,
 				844B4F08182ADFF600627A69 /* Frameworks */,
@@ -229,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844345421839442C00F76408 /* ANTableViewController.xib in Resources */,
 				844B4F22182ADFF600627A69 /* Images.xcassets in Resources */,
 				844B4F14182ADFF600627A69 /* InfoPlist.strings in Resources */,
 				844B4F1D182ADFF600627A69 /* Main.storyboard in Resources */,
@@ -250,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844345411839442C00F76408 /* ANTableViewController.m in Sources */,
 				844B4F16182ADFF600627A69 /* main.m in Sources */,
 				844B4F20182ADFF600627A69 /* ANViewController.m in Sources */,
 				844B4F1A182ADFF600627A69 /* ANAppDelegate.m in Sources */,
@@ -461,6 +471,7 @@
 				844B4F3A182ADFF700627A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844B4F3B182ADFF700627A69 /* Build configuration list for PBXNativeTarget "MyProject2Tests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +480,7 @@
 				844B4F3D182ADFF700627A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "ANViewController.h"
+#import "ANTableViewController.h"
 
 @interface ANViewController ()
 
@@ -19,17 +20,21 @@
 int i;
 
 -(IBAction)pressButton{
-    
     i=i+1;
-    
     myLabel.text=[NSString stringWithFormat:@"%d", i];
-    
+}
+
+-(IBAction)showTable:(id)sender{
+    ANTableViewController *myTable=[[ANTableViewController alloc]init];
+    //[self presentViewController:myTable animated:YES completion:nil];
+    [self.navigationController pushViewController:myTable animated:YES];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title=@"Menu";
 }
 
 - (void)didReceiveMemoryWarning

@@ -15,6 +15,8 @@
 }
 
 -(IBAction)pressButton;
+-(IBAction)showTable:(id)sender;
 
 @property(nonatomic,retain) IBOutlet UILabel *myLabel;
 @end
+
