@@ -14,6 +14,9 @@
 
 @implementation ANTableViewController
 
+@synthesize addTable;
+@synthesize textInTable;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,7 +31,44 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title=@"Table";
+    self.textInTable=[NSArray arrayWithObjects:
+                 @"text1",
+                 @"text2 very very very long text with words",
+                 @"text3",
+                 nil];
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *) tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
+    return [textInTable count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier=@"Cell";
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell==nil){
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.textLabel.lineBreakMode=NSLineBreakByWordWrapping;
+        cell.textLabel.numberOfLines=0;
+    }
+    cell.textLabel.text=[textInTable objectAtIndex:indexPath.row];
+    return cell;
+}
+
+/*
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *cellText=[students objectAtIndex:indexPath.row];
+    UIFont *cellFont=[UIFont fontWithName:@"Helvetica-Bold" size:20.0f];
+ //   CGSize constraintSize = CGSizeMake(320.0f, MAXFLOAT);
+    CGSize labelSize=[cellText sizeWithAttributes:@{NSFontAttributeName:cellFont}];
+ //                               constrainedToSize:constraintSize
+ //                                                   lineBreakMode:NSLineBreakByWordWrapping];
+    return labelSize.height+20.f;
+}
+*/
 
 - (void)didReceiveMemoryWarning
 {

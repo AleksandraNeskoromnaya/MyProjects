@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ANTableViewController : UIViewController
+<UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *addTable;
+    NSArray *textInTable;
+}
+
+@property(nonatomic,retain)IBOutlet UITableView *addTable;
+@property(nonatomic,retain)NSArray *textInTable;
 
 @end
