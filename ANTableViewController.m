@@ -33,7 +33,7 @@
     self.title=@"Table";
     self.textInTable=[NSArray arrayWithObjects:
                  @"text1",
-                 @"text2 very very very long text with words",
+                 @"text2 very very very long text with very very large number of words that should go to the third line",
                  @"text3",
                  nil];
 }
@@ -58,17 +58,16 @@
     return cell;
 }
 
-/*
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *cellText=[students objectAtIndex:indexPath.row];
+    NSString *cellText=[textInTable objectAtIndex:indexPath.row];
     UIFont *cellFont=[UIFont fontWithName:@"Helvetica-Bold" size:20.0f];
- //   CGSize constraintSize = CGSizeMake(320.0f, MAXFLOAT);
-    CGSize labelSize=[cellText sizeWithAttributes:@{NSFontAttributeName:cellFont}];
- //                               constrainedToSize:constraintSize
- //                                                   lineBreakMode:NSLineBreakByWordWrapping];
-    return labelSize.height+20.f;
+    CGSize constraintSize = CGSizeMake(320.0f, MAXFLOAT);
+    CGRect size=[cellText boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:cellFont}  context:nil];
+    
+    return size.size.height;
 }
-*/
+
 
 - (void)didReceiveMemoryWarning
 {
