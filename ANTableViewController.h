@@ -12,10 +12,14 @@
 <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *addTable;
-    NSArray *textInTable;
+    NSMutableArray *textInTable;
 }
+-(void)addNew;
+-(IBAction)editItem:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
 @property(nonatomic,retain)IBOutlet UITableView *addTable;
-@property(nonatomic,retain)NSArray *textInTable;
+@property(nonatomic,retain)NSMutableArray *textInTable;
 
 @end
